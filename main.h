@@ -1,0 +1,13 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <unistd.h>
+
+int _putchar(char c);
+int _printf(const char *format, ...);
+void print_str(char *str);
+void print_int(int num);
+int _strlen(char *str);
+
+
+#endif
