@@ -22,7 +22,7 @@ void _switch(char c, va_list args, int *len)
 			break;
 		case 's':
 			s = (va_arg(args, char *));
-			if (s == NULL || s[0] == '\0')
+			if (s == NULL)
 				break;
 			print_str(s);
 			(*len) += _strlen(s);
