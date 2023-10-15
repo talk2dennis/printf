@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  *_printf: my main function
@@ -13,10 +13,10 @@ int _printf(const char *format, ...){
   va_list args;
   int len = 0, i = 0;
 
-  va_start(args, format);
+  // va_start(args, format);
   while (format[len] != '\0') {
     if (format[i] != '%') {
-      putchar(format[i]);
+      _putchar(format[i]);
       len++;
     } 
 else {
@@ -31,7 +31,7 @@ i++;
           len += _strlen(va_arg(args, char *));
           break;
         case '%':
-          putchar('%');
+          _putchar('%');
           len++;
           break;
         default:
@@ -40,5 +40,5 @@ i++;
     }
   }
   va_end(args);
-  return len;
+  return (len);
 }
