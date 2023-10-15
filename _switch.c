@@ -38,7 +38,7 @@ void _switch(char c, va_list args, int *len)
 		case 'd':
 			print_int(va_arg(args, int));
 			(*len)++;
-			break;	
+			break;
 		default:
 			_putchar(va_arg(args, int));
 			(*len)++;
