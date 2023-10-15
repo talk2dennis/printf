@@ -8,7 +8,6 @@
  * Return: lenght
  */
 
-
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -27,26 +26,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			switch (format[i])
-			{
-				case 'c':
-					_putchar(va_arg(args, int));
-					len++;
-					break;
-				case 's':
-					s = (va_arg(args, char *));
-				  	print_str(s);
-					len += _strlen(s);
-					break;
-				case '%':
-					_putchar('%');
-					len++;
-					break;
-				default:
-					_putchar(va_arg(args, int));
-					len++;
-					break;
-			}
+			_switch(s, format[i]);
 			i++;
 		}
 	}
