@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int len = 0, i = 0;
-	char *s;
 
 	va_start(args, format);
 	while (format[i] != '\0')
@@ -26,7 +25,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			_switch(s, format[i]);
+			_switch(format[i], args, &len);
 			i++;
 		}
 	}

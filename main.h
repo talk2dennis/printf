@@ -10,6 +10,6 @@ int _printf(const char *format, ...);
 void print_str(char *str);
 void print_int(int num);
 int _strlen(char *str);
-void _switch(char *s, char c);
+void _switch(char c, va_list args, int *len);
 
 #endif
