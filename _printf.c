@@ -30,25 +30,22 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					_putchar(va_arg(args, int));
-					i++;
 					len++;
 					break;
 				case 's':
-					print_str(va_arg(args, char *));
+				  printf("%s", (va_arg(args, char *)));
 					len += _strlen(va_arg(args, char *));
-					i++;
 					break;
 				case '%':
 					_putchar('%');
 					len++;
-					i++;
 					break;
 				default:
 					_putchar(va_arg(args, int));
-					i++;
 					len++;
 					break;
 			}
+			i++;
 		}
 	}
 	va_end(args);
