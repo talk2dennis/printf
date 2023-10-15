@@ -1,5 +1,5 @@
 /**
-* print_str - Function to print numbers
+* print_int - Function to print numbers
 * @num: int to print
 * Return: nothing
 */
