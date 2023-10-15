@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
 * print_int - Function to print numbers
 * @num: int to print
