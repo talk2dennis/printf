@@ -1,4 +1,3 @@
-
 # 0x11. C - printf
 
 ## **C** Group project
@@ -17,7 +16,7 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 > - Prototype: int _printf(const char *format, ...);
 > - Returns: the number of characters printed (excluding the null byte used to end output to strings)
 > - write output to stdout, the standard output stream
-> - format is a character string. The format string is composed of zero or more directives. 
+> - format is a character string. The format string is composed of zero or more directives.
 > - ***c, s, %***
 
 1. Education is when you read the fine print. Experience is what you get if you don't
@@ -28,5 +27,3 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 2. With a face like mine, I do better in print
 > Handle the following custom conversion specifiers:
 > - b: the unsigned int argument is converted to binary
-
-
