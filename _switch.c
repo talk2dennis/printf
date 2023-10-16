@@ -12,7 +12,7 @@
 
 void _switch(char c, va_list args, int *len)
 {
-	char *s;
+	char *str;
 
 	switch (c)
 	{
@@ -21,20 +21,23 @@ void _switch(char c, va_list args, int *len)
 			(*len)++;
 			break;
 		case 's':
-			s = (va_arg(args, char *));
-			if (s == NULL)
-				break;
-			print_str(s);
-			(*len) += _strlen(s);
+			str = (va_arg(args, char *));
+			if (str == NULL)
+			{
+				str = "(null)";
+			}
+			print_str(str);
+			(*len) += _strlen(str);
 			break;
 		case '%':
 			_putchar('%');
 			(*len)++;
 			break;
 		case 'i':
+			print_int(va_arg(args, int), len);
+			break;
 		case 'd':
-			print_int(va_arg(args, int));
-			(*len)++;
+			print_int(va_arg(args, int), len);
 			break;
 		default:
 			_putchar(va_arg(args, int));
