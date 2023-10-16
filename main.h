@@ -11,5 +11,6 @@ void print_str(char *str);
 void print_int(long int num, int *len);
 int _strlen(char *str);
 void _switch(char c, va_list args, int *len);
+void printf_bin(long int n,  int *len);
 
 #endif

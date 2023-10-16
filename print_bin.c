@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * printf_bin - print binary function
  *
@@ -5,7 +7,7 @@
  *
  * Return: nothing
  */
-printf_bin(long int n,  int *len)
+void printf_bin(long int n,  int *len)
 {
         char bin_str[32];
         int i;
@@ -34,7 +36,7 @@ printf_bin(long int n,  int *len)
                 {
                         bin_str[i] = '0' + (n % 2);
                         n /= 2;
-                        i++
+                        i++;
                 }
                 for (i = 1; i >= 0; i--)
                 {
