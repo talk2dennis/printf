@@ -30,15 +30,15 @@ void printf_bin(long int n,  int *len)
                 }
         }
 
-		else if (n > 0)
-        {
-                while (n > 0)
-                {
+	else if (n > 0)
+	{
+	while (n > 0)
+	{
                         bin_str[i] = '0' + (n % 2);
                         n /= 2;
                         i++;
                 }
-                for (i = 1; i >= 0; i--)
+                for (i = i - 1; i >= 0; i--)
                 {
                         _putchar(bin_str[i]);
                         (*len)++;
