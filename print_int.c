@@ -6,7 +6,8 @@
 * @len: length of characters printed
 * Return: nothing
 */
-void print_int(int num, int *len)
+
+void print_int(long int num, int *len)
 {
 	if (num < 0)
 	{
@@ -18,11 +19,12 @@ void print_int(int num, int *len)
 	{
 		_putchar('0');
 		(*len)++;
+		return;
 	}
 	if (num / 10 != 0)
 	{
 		print_int(num / 10, len);
-		(*len)++;
 	}
 	_putchar('0' + num % 10);
+	(*len)++;
 }

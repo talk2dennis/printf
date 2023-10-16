@@ -8,7 +8,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 void print_str(char *str);
-void print_int(int num, int *len);
+void print_int(long int num, int *len);
 int _strlen(char *str);
 void _switch(char c, va_list args, int *len);
 
