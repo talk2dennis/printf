@@ -6,26 +6,40 @@
 * Return: nothing
 */
 
-int print_int(int num)
+int print_int(int n)
 {
-	int len = 0;
+	int printed_chars = 0, last_num, last_digit = n % 10, digit, exponent = 1;
 
-	if (num < 0)
+	n = n / 10;
+	last_num = n;
+
+	if (last_digit < 0)
 	{
-	putchar('-');
-	num = -num;
-	len++;
+		_putchar('-');
+		last_num = -last_num;
+		n = -n;
+		last_digit = -last_digit;
+		printed_chars++;
 	}
-	if (num == 0)
+	if (last_num > 0)
 	{
-		putchar('0');
-		len++;
+		while (last_num / 10 != 0)
+		{
+			exponent = exponent * 10;
+			last_num /= 10;
+		}
+		last_num = n;
+		while (exponent > 0)
+		{
+			digit = last_num / exponent;
+			_putchar(digit + '0');
+			last_num = last_num - (digit * exponent);
+			exponent /= 10;
+			printed_chars++;
+		}
 	}
-	else if (num / 10 != 0)
-	{
-		len += print_int(num / 10);
-	}
-	putchar('0' + (num % 10));
-	len++;
-	return (len);
+	_putchar(last_digit + '0');
+
+	return (printed_chars);
 }
+
