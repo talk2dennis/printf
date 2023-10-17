@@ -8,7 +8,7 @@
  *
  * Return: nothing
  */
-int printf_bin(int n,  int *len)
+void printf_bin(int n,  int *len)
 {
 	char bin_str[32];
 	int i;
@@ -49,5 +49,4 @@ int printf_bin(int n,  int *len)
 		_putchar('0');
 		(*len)++;
 	}
-	return (len);
 }
