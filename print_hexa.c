@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * print_hexa - change the decimal to hexadecimal
@@ -13,6 +14,8 @@ int print_hexa(int n)
 	
 	int len = 0;
 	unsigned int num = n;
+	int i;
+
 	
 	while (num != 0) {
 		unsigned int temp = num % 16;
@@ -20,8 +23,8 @@ int print_hexa(int n)
 		len++;
 		num /= 16;
 	}
-	
-	for (int i = len - 1; i >= 0; i--) {
+
+	for (i = len - 1; i >= 0; i--) {
 		_putchar(hexa_chars[i]);
 	}
 	
