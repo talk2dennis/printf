@@ -24,7 +24,7 @@ void _switch(char c, va_list args, int *len)
 			str = (va_arg(args, char *));
 			if (str == NULL)
 			{
-				str = "(null)";
+				str = "(nil)";
 			}
 			print_str(str);
 			(*len) += _strlen(str);
@@ -34,14 +34,15 @@ void _switch(char c, va_list args, int *len)
 			(*len)++;
 			break;
 		case 'i':
-			print_int(va_arg(args, long int), len);
+			len += print_int(va_arg(args, int));
 			break;
 		case 'd':
-			print_int(va_arg(args, long int), len);
+			len += print_int(va_arg(args, int));
 			break;
 		case 'b':
-			printf_bin(va_arg(args, long int), len);
+			printf_bin(va_arg(args, int), len);
 			break;
+		  
 		default:
 			_putchar(va_arg(args, int));
 			(*len)++;
