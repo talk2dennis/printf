@@ -42,7 +42,14 @@ void _switch(char c, va_list args, int *len)
 		case 'b':
 			printf_bin(va_arg(args, int), len);
 			break;
-		  
+		case 'R':
+			str = (va_arg(args, char *));
+			if (str == NULL)
+			{
+				str = "(nil)";
+			}
+			print_rot13(str);
+			break;
 		default:
 			_putchar(va_arg(args, int));
 			(*len)++;
