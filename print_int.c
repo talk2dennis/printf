@@ -5,16 +5,15 @@
 * @num: int to print
 * Return: nothing
 */
-
 int print_int(int num)
 {
 	int len = 0;
 
 	if (num < 0)
 	{
-	putchar('-');
-	num = -num;
-	len++;
+		_putchar('-');
+		num = -num;
+		len++;
 	}
 	if (num == 0)
 	{
