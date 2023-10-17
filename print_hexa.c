@@ -7,10 +7,10 @@
  *Return: returng the lenght of the string desimal pranted
  */
 
-int print_hexa(int n)
+int print_hexa(long int n)
 {
 	char *hexa_chars = malloc(sizeof(char) * 16);
-	int len = 0;
+	int k = 0;
 	unsigned int num = n;
 	int i;
 
@@ -18,14 +18,17 @@ int print_hexa(int n)
 	{
 		unsigned int temp = num % 16;
 
-		hexa_chars[len] = hexa_chars[temp];
-		len++;
+		hexa_chars[k] = hexa_chars[temp];
+		k++;
 		num /= 16;
 	}
 
-	for (i = len - 1; i >= 0; i--)
+	for (i = k - 1; i >= 0; i--)
+	{
 		_putchar(hexa_chars[i]);
+	}
 
 	free(hexa_chars);
-	return (len);
+
+	return (k);
 }
