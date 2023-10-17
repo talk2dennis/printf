@@ -8,9 +8,9 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 void print_str(char *str);
-void print_int(long int num, int *len);
+int print_int(int num);
 int _strlen(char *str);
 void _switch(char c, va_list args, int *len);
-void printf_bin(long int n,  int *len);
+void printf_bin(int n,  int *len);
 
 #endif
