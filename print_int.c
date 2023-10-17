@@ -8,10 +8,9 @@
 int print_int(int num)
 {
 	int len = 0;
-
 	if (num < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		num = -num;
 		len++;
 	}
@@ -26,5 +25,6 @@ int print_int(int num)
 	}
 	putchar('0' + (num % 10));
 	len++;
-	return (len);
+	return len;
 }
+
