@@ -44,6 +44,7 @@ void _switch(char c, va_list args, int *len)
 			break;
 		case 'x':
 			len += print_hexa(va_arg(args, int));
+			break;
 		case 'R':
 			str = (va_arg(args, char *));
 			if (str == NULL)

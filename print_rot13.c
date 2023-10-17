@@ -8,8 +8,10 @@
 void print_rot13(char *str)
 {
 	int pls = 0;
+	int len = _strlen(str);
+	int i;
 	
-	for (int i = 0; str[i] != "\0"; i++)
+	for (i = 0; i < len; i++)
 	{
 		char c = str[i];
 		
