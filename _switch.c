@@ -35,6 +35,9 @@ void _switch(char c, va_list args, int *len)
 		case 'x':
 			print_hexa(va_arg(args, long int));
 			break;
+		case 'r':
+			(*len) += print_revstr(va_arg(args, char *));
+			break;
 		case 'R':
 			(*len) += print_rot13(va_arg(args, char *));
 			break;

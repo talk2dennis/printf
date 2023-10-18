@@ -14,5 +14,6 @@ void _switch(char c, va_list args, int *len);
 void printf_bin(int n,  int *len);
 int print_rot13(char *);
 int print_hexa(long int n);
+int print_revstr(char *str);
 
 #endif
