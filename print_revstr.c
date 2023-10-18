@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-*print_str - Function to print string of characters
-* @args: va_list args
+*print_revstr - Function to print string of characters
+* @str: sting to rev
 * Return: length of printed chars
 */
 int print_revstr(char *str)
