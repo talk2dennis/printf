@@ -8,45 +8,26 @@
  *
  * Return: nothing
  */
-void printf_bin(int n,  int *len)
+void printf_bin(int n, int *len)
 {
 	char bin_str[32];
-	int i;
-
+	int i = 0;
+	
 	if (n < 0)
 	{
+		_putchar('-');
 		n = -n;
-
-		while (n > 0)
-		{
-			bin_str[i] = '0' + (n % 2);
-			n /= 2;
-			i++;
-		}
-		for (i = 1; i >= 0; i--)
-		{
-			_putchar('-');
-			_putchar(bin_str[i]);
-			(*len)++;
-		}
 	}
-	else if (n > 0)
+	
+	do
 	{
-		while (n > 0)
-		{
-			bin_str[i] = '0' + (n % 2);
-			n /= 2;
-			i++;
-		}
-		for (i = i - 1; i >= 0; i--)
-		{
-			_putchar(bin_str[i]);
-			(*len)++;
-		}
-	}
-	else
+		bin_str[i++] = '0' + (n % 2);
+		n /= 2;
+	} while (n > 0);
+	
+	for (i = i - 1; i >= 0; i--)
 	{
-		_putchar('0');
+		_putchar(bin_str[i]);
 		(*len)++;
 	}
 }
