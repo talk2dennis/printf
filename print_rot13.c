@@ -3,14 +3,16 @@
 /**
  * print_rot13 - print coding alpha + 13alpha
  *@str: the string given
- *Return: nothing
+ *Return: length of printed chars
  */
-void print_rot13(char *str)
+int print_rot13(char *str)
 {
 	int pls = 0;
 	int len = _strlen(str);
 	int i;
 
+	if (str == NULL)
+		str = "(null)";
 	for (i = 0; i < len; i++)
 	{
 		char c = str[i];
@@ -26,4 +28,5 @@ void print_rot13(char *str)
 		}
 		_putchar(c);
 	}
+	return (len);
 }

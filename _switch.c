@@ -10,8 +10,6 @@
 
 void _switch(char c, va_list args, int *len)
 {
-	char *str;
-
 	switch (c)
 	{
 		case 'c':
@@ -19,13 +17,7 @@ void _switch(char c, va_list args, int *len)
 			(*len)++;
 			break;
 		case 's':
-			str = (va_arg(args, char *));
-			if (str == NULL)
-			{
-				str = "(nil)";
-			}
-			print_str(str);
-			(*len) += _strlen(str);
+			(*len) += print_str(args);
 			break;
 		case '%':
 			_putchar('%');
@@ -44,12 +36,7 @@ void _switch(char c, va_list args, int *len)
 			print_hexa(va_arg(args, long int));
 			break;
 		case 'R':
-			str = (va_arg(args, char *));
-			if (str == NULL)
-			{
-				str = "(nil)";
-			}
-			print_rot13(str);
+			(*len) += print_rot13(va_arg(args, char *));
 			break;
 		default:
 			_putchar(va_arg(args, int));

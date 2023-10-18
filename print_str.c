@@ -2,13 +2,20 @@
 /**
 *print_str - Function to print string of characters
 * @str: strings to print
-* Return: nothing
+* Return: length of printed chars
 */
-void print_str(char *str)
+int print_str(va_list args)
 {
-	while (*str != '\0')
+	char *str;
+	int i = 0;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+		str = "(null)";
+	while (str[i] != '\0')
 	{
-		_putchar(*str);
-		str++;
+		_putchar(str[i]);
+		i++;
 	}
+	return (i);
 }
