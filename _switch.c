@@ -24,10 +24,10 @@ void _switch(char c, va_list args, int *len)
 			(*len)++;
 			break;
 		case 'i':
-			(*len) += print_int(va_arg(args, int));
+			print_int(va_arg(args, long int), len);
 			break;
 		case 'd':
-			(*len) += print_int(va_arg(args, int));
+			print_int(va_arg(args, long int), len);
 			break;
 		case 'b':
 			printf_bin(va_arg(args, int), len);

@@ -3,30 +3,27 @@
 /**
 * print_int - Function to print numbers
 * @num: int to print
-* Return: legth of printed chars
+* @len: lenght
+* Return: nothing
 */
-
-int print_int(int num)
+void print_int(int num, int *len)
 {
-	int len = 0;
-
 	if (num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num = -num;
-		len++;
+		(*len)++;
 	}
 	if (num == 0)
 	{
-		putchar('0');
-		return (1);
+		_putchar('0');
+		(*len)++;
+		return;
 	}
 	if (num / 10 != 0)
 	{
-		len += print_int(num / 10);
+		print_int(num / 10, len);
 	}
-	putchar('0' + (num % 10));
-	len++;
-	return (len);
+	_putchar('0' + num % 10);
+	(*len)++;
 }
-
