@@ -23,6 +23,7 @@ void _switch(char c, va_list args, int *len)
 			_putchar('%');
 			(*len)++;
 			break;
+		case 'u':
 		case 'i':
 			print_int(va_arg(args, long int), len);
 			break;
