@@ -8,7 +8,14 @@
 */
 void print_int(int num, int *len)
 {
-	if (num < 0)
+	if (num == INT_MIN)
+	{
+		_putchar('-');
+		 _putchar('2');
+		 num = 147483648;
+		(*len) += 2;
+	}
+	else if (num < 0)
 	{
 		_putchar('-');
 		num = -num;
