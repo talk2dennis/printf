@@ -42,7 +42,8 @@ void _switch(char c, va_list args, int *len)
 			(*len) += print_rot13(va_arg(args, char *));
 			break;
 		default:
-			_putchar(va_arg(args, int));
+			_putchar('%');
+			_putchar(c);
 			(*len)++;
 			break;
 	}
