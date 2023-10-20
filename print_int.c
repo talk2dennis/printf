@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
 * print_int - Function to print numbers
